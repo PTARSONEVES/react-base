@@ -1,0 +1,40 @@
+{
+  "DockerRun.DisableDockerrc": true,
+  "php.debug.port": [],
+  "workbench.startupEditor": "none",
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Dracula Theme",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.fontSize": 18,
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+      "source.fixAll.ts": "explicit"
+  },
+  "gitlens.gitCommands.skipConfirmations": [
+      "fetch:command",
+      "switch:command",
+      "stash-push:command"
+  ],
+  "explorer.compactFolders": false,
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+      "python": "cls; python -u"
+  },
+  "code-runner.ignoreSelection": true,
+  "python.defaultInterpreterPath": "python",
+  "terminal.integrated.tabs.enabled": false,
+  "vscode-edge-devtools.webhint": false,
+  "yaml.schemas": {
+      "file:///c%3A/Users/Paulo%20de%20Tarso/.vscode/extensions/docsmsft.docs-yaml-1.0.1/dist/toc.schema.json": "/toc\\.yml/i"
+  },
+  "terminal.integrated.enablePersistentSessions": false,
+  "editor.cursorStyle": "block",
+  "database-client.autoSync": true,
+  "powershell.promptToUpdatePowerShell": false,
+  "[html]": {
+      "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[javascript]": {
+      "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  }
+}
