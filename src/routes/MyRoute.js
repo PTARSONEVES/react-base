@@ -8,7 +8,7 @@ export default function MyRoute({ component: Component, isClosed, ...rest}) {
   if (isClosed && !isLoggedIn) {
     return (
       <Redirect
-        to={{ pathname: '/Login', state: { prevPath: rest.location.pathname} }}
+        to={{ pathname: '/login', state: { prevPath: rest.location.pathname} }}
       />
     );
   }
@@ -22,5 +22,5 @@ MyRoute.defaultProps = {
 
 MyRoute.propTypes = {
   component: PropTypes.oneOfType([PropTypes.element, PropTypes.func]).isRequired,
-  isClosed: PropTypes.bool
+  isClosed: PropTypes.bool,
 };

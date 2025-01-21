@@ -12,11 +12,11 @@ export default function Login() {
 
   return (
     <Container>
-     <Title>
-      Login<small>Testando</small>
-     </Title>
-     <Paragrafo>Loren lnerjhgmsççgjj</Paragrafo>
-     <button type='button'>Enviar</button>
+      <Title>
+        Login<small>Testando</small>
+      </Title>
+      <Paragrafo>Loren lnerjhgmsççgjj</Paragrafo>
+      <button type='button'>Enviar</button>
     </Container>
   );
 }
