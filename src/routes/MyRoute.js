@@ -1,26 +1,16 @@
 import React from "react";
-import { Route, redirect as Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
-export default function MyRoute({ component: Component, isClosed, ...rest}) {
-  const isLoggedIn = false;
-
-  if (isClosed && !isLoggedIn) {
-    return (
-      <Redirect
-        to={{ pathname: '/login', state: { prevPath: rest.location.pathname} }}
-      />
-    );
-  }
-
-  return <Route { ...rest } component={Component} />;
-};
-
-MyRoute.defaultProps = {
-  isClosed: false,
-};
-
+function useAuth() {
+  const user = { loggedIn: true };
+  return user && user.loggedIn;
+}
+export default function MyRoute({ children }) {
+  const isAuthenticated = useAuth();
+  console.log(isAuthenticated);
+    return isAuthenticated ? children : <Navigate to="/login" />;
+}
 MyRoute.propTypes = {
-  component: PropTypes.oneOfType([PropTypes.element, PropTypes.func]).isRequired,
-  isClosed: PropTypes.bool,
-};
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.func]).isRequired,
+}
