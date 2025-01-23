@@ -5,7 +5,6 @@ import { Container } from '../../styles/GlobalStyles';
 import { Title, Paragrafo } from './styled';
 import * as exampleActions from '../../store/modules/example/actions';
 
-import axios from '../../services/axios';
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -16,16 +15,7 @@ export default function Login() {
     dispatch(exampleActions.clicaBotaoRequest());
   }
 
-  React.useEffect(() => {
-    async function getData() {
-      const response = await axios.get('/users');
-      const { data } = response;
-      console.log(data);
-    }
-    getData();
-  }, []);
-
-  return (
+    return (
     <Container>
       <Title>
         Login<small>Testando</small>

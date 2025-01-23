@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import { primaryColor } from "../../config/colors";
+import * as colors from "../../config/colors";
 
 export const Nav = styled.nav`
-  background: ${primaryColor};
+  background: ${colors.dark.background};
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   a {
-    color: #fff;
+    color: ${colors.dark.color};
     margin: 0 10px 0 0;
     font-weight: bold;
   }
