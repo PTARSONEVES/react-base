@@ -12,8 +12,8 @@ export default createGlobalStyle`
 
   body {
     font-family: sans-serif;
-    background: ${colors.primaryDarkColor};
-    color: ${colors.primaryColor};
+    background: ${colors.dark.background};
+    color: ${colors.dark.color};
   }
   html, body, #root {
     height: 100%;
@@ -21,9 +21,9 @@ export default createGlobalStyle`
 
   button {
     cursor: pointer;
-    background: ${colors.primaryColor};
+    background: ${colors.dark.background};
     border: none;
-    color: #fff;
+    color: ${colors.dark.color};
     padding: 10px 20px;
     border-radius: 4px;
     font-weight: 700;
@@ -31,7 +31,7 @@ export default createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${colors.primaryColor};
+    color: ${colors.dark.color};
   }
 
   ul {
@@ -49,7 +49,7 @@ export default createGlobalStyle`
 
 export const Container = styled.section`
   max-width: 360px;
-  background: #111;
+  background: ${colors.dark.navbar};
   margin: 30px auto;
   padding: 30px;
   border-radius: 4px;
