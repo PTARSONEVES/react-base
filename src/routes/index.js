@@ -12,9 +12,11 @@ export default function Rotas() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route element={<MyRoute/>}>
-        <Route path='/users' element={<Users/>} />
+        <Route path='/users/:id/edit' element={<Users/>} />
+        <Route path='/fotos/:id' element={<Fotos/>} />
       </Route>
       <Route path="/login" element={<Login />} />
+      <Route path="/users/register" element={<UserRegister />} />
       <Route path="*" element={<Page404/>} />
     </Routes>
   );
